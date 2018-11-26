@@ -1,0 +1,18 @@
+import java.util.*;
+public class arrayListSort{
+    public arrayListSort(){}
+    public ArrayList<Integer>sort(ArrayList<Integer>RandomNum){
+        ArrayList<Integer> sortedArray = new ArrayList<Integer>();
+        int lowestNum = RandomNum.get(0);
+        for(int k = 0; k<RandomNum.size();k++){
+            for(int j = 1; j<RandomNum.size();j++){
+                if(RandomNum.get(j) < lowestNum){
+                   lowestNum = RandomNum.get(j);
+                }
+            }
+            sortedArray.add(lowestNum);
+        }
+        Arrays.toString(sortedArray.toArray());
+        return sortedArray;
+    }
+}
